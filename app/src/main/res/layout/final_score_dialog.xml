@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#5C6296"
+    android:id="@+id/layoutnext"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#144855"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Point Kamu"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/winner"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/text_final_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat\n kamu dapat: 0 Point"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Sentuh dimana saja untuk lanjut"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>

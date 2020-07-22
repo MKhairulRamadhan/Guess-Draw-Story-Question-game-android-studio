@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5C6296"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activity.StoryNQuestionActivity">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/txtTotalQuestion"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Questions: 1 / 10"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/llPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/txtTotalQuestion"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="Correct : 0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtWrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="Wrong : 0"
+            android:textAlignment="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="Point: 0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollviewparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llPoint">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/title_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Spogebob Squarepants"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_story"
+                android:layout_below="@+id/title_story"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/dorae"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView2"
+                android:layout_below="@+id/img_story"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_story"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/story_story"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="dskfna ksldjflasd jflasdfj skdlfjlk sdf ejri oijfowe oiej oiewoijfoi ejfiow joifjewofjewof jfeij ofewjfo ije dskfna ksldjflasd jflasdfj skdlfjlk sdf ejri oijfowe oiej oiewoijfoi ejfiow joifjewofjewof jfeij ofewjfo ije dskfna ksldjflasd jflasdfj skdlfjlk sdf ejri oijfowe oiej oiewoijfoi ejfiow joifjewofjewof jfeij ofewjfo ije dskfna ksldjflasd jflasdfj skdlfjlk sdf ejri oijfowe oiej oiewoijfoi ejfiow joifjewofjewof jfeij ofewjfo ije"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp" />
+
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_below="@+id/scrollView2"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="PERTANYAAN "
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/scrollView2"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/pertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/quesstion_container_background"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Dino code academy is a great place to learn coding ?"
+                android:padding="10dp"
+                />
+
+            <RadioGroup
+                android:layout_below="@+id/txtQuestion"
+                android:id="@+id/radio_group"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons_background"
+                    android:layout_weight="1"
+                    android:text="operating System"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:padding="12sp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:freezesText="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons_background"
+                    android:layout_weight="1"
+                    android:text="Android os"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:padding="12sp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:freezesText="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons_background"
+                    android:layout_weight="1"
+                    android:text="Bluebery phi"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:padding="12sp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:freezesText="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttons_background"
+                    android:layout_weight="1"
+                    android:text="Microcontroller"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:padding="12sp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:freezesText="true"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnComfirm"
+                android:layout_below="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/confimr_button_background"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
